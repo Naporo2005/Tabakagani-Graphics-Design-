@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tabakani Graphic Designs</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0e0e0e;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#111;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#ffd700;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#ffd700;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1558655146-d09347e92766");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:52px;
+color:#ffd700;
+}
+
+.hero p{
+margin-top:10px;
+font-size:18px;
+opacity:.8;
+}
+
+.hero button{
+margin-top:25px;
+padding:12px 30px;
+border:none;
+background:#ffd700;
+color:black;
+font-weight:bold;
+cursor:pointer;
+border-radius:25px;
+}
+
+/* SECTIONS */
+
+section{
+padding:100px 8%;
+scroll-margin-top:90px;
+}
+
+/* ABOUT */
+
+.about{
+text-align:center;
+max-width:700px;
+margin:auto;
+}
+
+.about h2{
+color:#ffd700;
+margin-bottom:20px;
+}
+
+.about p{
+line-height:1.7;
+opacity:.8;
+}
+
+/* SERVICES */
+
+.services h2{
+text-align:center;
+color:#ffd700;
+margin-bottom:40px;
+}
+
+.service-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.service{
+background:#1a1a1a;
+padding:25px;
+border-radius:8px;
+text-align:center;
+transition:.3s;
+}
+
+.service:hover{
+transform:translateY(-5px);
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+background:#111;
+}
+
+.portfolio h2{
+text-align:center;
+color:#ffd700;
+margin-bottom:40px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
+
+.work{
+overflow:hidden;
+border-radius:8px;
+}
+
+.work img{
+width:100%;
+transition:.5s;
+}
+
+.work:hover img{
+transform:scale(1.1);
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact h2{
+color:#ffd700;
+margin-bottom:30px;
+}
+
+form{
+max-width:450px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+input, textarea{
+padding:12px;
+border:none;
+background:#1a1a1a;
+color:white;
+border-radius:5px;
+}
+
+button{
+padding:12px;
+background:#ffd700;
+border:none;
+font-weight:bold;
+cursor:pointer;
+border-radius:20px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#000;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Tabakani</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<section class="hero" id="home">
+
+<h1>Tabakani Graphic Designs</h1>
+<p>Creative Graphic Designer</p>
+
+<button onclick="goPortfolio()">View Portfolio</button>
+
+</section>
+
+
+<section class="about" id="about">
+
+<h2>About Me</h2>
+
+<p>
+I design creative and eye-catching graphics for weddings, birthdays,
+graduations, naming ceremonies, business promotions and custom
+t-shirt prints. My goal is to transform ideas into powerful visual
+designs that attract attention.
+</p>
+
+</section>
+
+
+<section class="services" id="services">
+
+<h2>Services</h2>
+
+<div class="service-container">
+
+<div class="service">
+<h3>Wedding Posters</h3>
+</div>
+
+<div class="service">
+<h3>Birthday Designs</h3>
+</div>
+
+<div class="service">
+<h3>Naming Ceremony</h3>
+</div>
+
+<div class="service">
+<h3>Graduation Posters</h3>
+</div>
+
+<div class="service">
+<h3>Business Flyers</h3>
+</div>
+
+<div class="service">
+<h3>T-Shirt Designs</h3>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="portfolio" id="portfolio">
+
+<h2>Portfolio</h2>
+
+<div class="gallery">
+
+<div class="work"><img src="Neverluck.png"></div>
+<div class="work"><img src="Doit.jpg"></div>
+<div class="work"><img src="Ceremony.jpg"></div>
+<div class="work"><img src="Icon.jpg"></div>
+<div class="work"><img src="Aja.jpg"></div>
+<div class="work"><img src="Jumma.png"></div>
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<h2>Contact</h2>
+
+<form onsubmit="sendMessage(event)">
+
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<br>
+
+<p>📞 +233 55 397 0641</p>
+<p>📷 @tabakani_designs</p>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Tabakani Graphic Designs</p>
+
+</footer>
+
+
+<script>
+
+function goPortfolio(){
+document.getElementById("portfolio").scrollIntoView({
+behavior:"smooth"
+})
+}
+
+function sendMessage(e){
+e.preventDefault()
+alert("Message Sent Successfully!")
+}
+
+</script>
+
+</body>
+</html>

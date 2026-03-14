@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tabakani Graphic Designs</title>
+
+<style>
+
+/* GLOBAL */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Comic Sans MS,Georgia;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* header */
+header{
+  display: flex;
+  width: 100%;
+background-color: #837e17;
+opacity:0.9;
+position: fixed;
+padding:px 11%;
+backdrop-filter: blur(9px);
+z-index: 1000;
+}
+/* logo*/
+.logo{
+  margin-left:12px;
+  margin-top:10px;
+  height:90px;
+  width:90px;
+  border-radius:50px;
+}
+/* logo*/
+
+/* navbar */
+
+nav{  
+  background-color: #837e17;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1000;
+  color:white;
+}
+nav ul{
+  flex-direction: row;
+  justify-content:space-between;
+  align-items:center;
+  margin-left:120px;
+display:flex;
+gap:40px;
+list-style:none;
+color:white;
+}
+
+nav ul li{
+  font-size:30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style:none;
+  color:white;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  margin-right:9px;
+}
+/* navbar */
+
+/* header */
+
+
+
+
+nav ul li a:hover{
+text-decoration: underline;
+color:blue;
+font-size: 40px;
+margin-rightt:35px;
+
+}
+
+/* HERO */
+
+.hero{
+  outline: none;
+  font-size: 20px;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+flex-direction:column;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1611162617474-5b21e879e113");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:60px;
+color:#ffd700;
+letter-spacing:2px;
+}
+
+.hero p{
+margin-top:15px;
+font-size:25px;
+opacity:.8;
+}
+
+.hero button{
+width: 600px;
+height: 80px;
+margin-top:30px;
+padding:14px 35px;
+border:none;
+background:#ffd700;
+outline: none;
+color:black;
+font-size: 25px;
+font-family: Comic Sans MS,Georgia;
+font-weight:bold;
+cursor:pointer;
+border-radius:30px;
+transition:.3s;
+}
+
+.hero button:hover{
+  outline: none;
+transform:scale(1.1);
+}
+
+/* ABOUT */
+
+.about{
+font-family: Georgia;
+margin-top: 100px;
+padding:100px 10%;
+text-align:center;
+}
+
+.about h2{
+  margin-top: 160px;
+  margin-left: 250px;
+  border: none;
+  width: 250px;
+  outline: none;
+  background: none;
+font-size: 50px;
+text-align:center;
+color:#ffd700;
+margin-bottom:60px;
+}
+
+.about p{
+margin-left: 30px;
+margin-top:6px;
+font-family: Comic Sans MS,Georgia;
+font-size: 46px;
+max-width:950px;
+flex-wrap: wrap;
+opacity:.8;
+line-height:1.9;
+}
+
+/* About*/
+
+
+/* SERVICES */
+
+.services{
+padding:100px 10%;
+}
+
+.services h2{
+font-size:45px;
+text-align:center;
+color:#ffd700;
+margin-bottom:70px;
+padding-bottom: 45px;
+}
+
+.service-container{
+display:flex;
+justify-content: flex-start;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.card{
+width:120%;
+background:#181818;
+padding:20px;
+border-radius:10px;
+text-align:center;
+transition:.4s;
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.card img:hover{
+width:97%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.card:hover{
+  font-size: 35px;
+  margin-left: 12px;
+  width: 190%;
+  transform:scale(1.2);
+  opacity:1;
+background:#202020;
+box-shadow:0 0 13px #ffffffb7,0 0 23px #383930;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+/* services end/*
+
+/* FEATURED DESIGNS */
+
+.featured-designs{
+  padding:100px 10%;
+  background:#111;
+}
+
+.featured-designs h2{
+  text-align:center;
+  color:#ffd700;
+  font-size:45px;
+  margin-bottom:60px;
+}
+
+/* Container for all cards */
+.featured-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:center;
+}
+
+/* Single card */
+.featured-card{
+  position:relative;
+  width:300px;
+  border-radius:12px;
+  overflow:hidden;
+  cursor:pointer;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.featured-card img{
+  width:100%;
+  display:block;
+  border-radius:12px;
+  transition: transform .3s;
+}
+
+/* Hover effect */
+.featured-card:hover img{
+  transform:scale(1.1);
+}
+
+/* Overlay */
+.featured-card .overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  color:#ffd700;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  opacity:0;
+  transition:opacity .3s;
+}
+
+.featured-card:hover .overlay{
+  opacity:1;
+}
+
+.featured-card .overlay h3{
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.featured-card .overlay p{
+  font-size:16px;
+  line-height:1.4;
+  color:#fff;
+}
+
+/* PORTFOLIO */
+
+/*
+.portfolio{
+margin-top:12px ;
+font-size: 25px;
+padding:100px 10%;
+background:#111;
+}
+
+.portfolio h2{
+text-align:center;
+color:#ffd700;
+margin-bottom:50px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:10px;
+}
+
+.work{
+font-size: 25px;
+position:relative;
+overflow:hidden;
+border-radius:10px;
+}
+
+.work img{
+width:100%;
+display:block;
+transition:.5s;
+}
+
+.overlay{
+  font-size: 25px;
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.7);
+display:flex;
+justify-content:center;
+align-items:center;
+opacity:0;
+transition:.4s;
+}
+
+.overlay h3{
+color:#ffd700;
+}
+
+.work:hover img{
+transform:scale(1.2);
+}
+
+.work:hover .overlay{
+  width:100%;
+opacity:1;
+} */
+
+/* CONTACT */
+
+.contact{
+  display:flex;
+  flex-direction:column;
+  justify-content:centet;
+  margin-bottom: 56px;
+  font-size: 25px;
+padding:100px 10%;
+text-align:center;
+}
+.contact input{
+  font-size: 25px;
+  border: none;
+  border-bottom: 2px black;
+  border-left: 2px black;
+  border-right: 2px black;
+  
+}
+
+.contact h2{
+color:#ffd700;
+font-size:45px;
+margin-bottom:30px;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  justify-content:centet;
+  margin-bottom: 56px;
+  font-size: 25px;
+padding:100px 10%;
+text-align:center;
+gap:12px;
+}
+
+input, textarea{
+font-size: 25px;
+padding:12px;
+border:none;
+border-radius:6px;
+background:#1d1d1d;
+color:white;
+}
+
+button{
+font-size: 20px;
+width: 250px;
+height: 69px;
+padding:12px;
+outline: none;
+background:#ffd700;
+color:black;
+font-weight:bold;
+cursor:pointer;
+border-radius:20px;
+}
+
+.sendMessage{
+  outline: none;
+width: 250px;
+height: 69px;
+padding:12px;
+border:none;
+background:#ffd700;
+color:black;
+font-weight:bold;
+cursor:pointer;
+border-radius:20px;
+}
+
+
+button:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+height: 220px;
+padding-top:13px;
+text-align:center;
+background:#5a670eb7;
+margin-top:50px;
+opacity:0.7;
+box-shadow:0 0 13px #ffffffb7;
+}
+footer p{
+  padding-top: 6px;
+  font-size:45px;
+  margin-top:20px;
+}
+
+/* SCROLL ANIMATION */
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:80px 8%;
+scroll-margin-top:80px;
+scroll-snap-align:start;
+}
+
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.span{
+  font-size: 25px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+}
+/*Contact div blue color*/
+.fid{
+  background: #233f6a;
+  width:100%;
+  margin-right:56px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  margin-bottom: 56px;
+  font-size: 25px;
+padding:100px 10%;
+text-align:center;
+gap:12px;
+background:background:#0d0e0f72;
+box-shadow:0 0 12px #edeef0;
+border-radius:50px;
+margin-top:100px;
+}
+/*Contact div blue color*/
+
+
+/*Contacts img*/
+.pic{
+  padding-top:5px;
+  margin-right: 6px;
+  border-radius: 50px;
+  margin-top: 40px;
+}
+/*Contacts img*/
+
+
+/*Contacts numbers*/
+/*Contacts numbers*/
+
+</style>
+</head>
+
+<body>
+<header>
+<nav>
+
+
+<a href="#home"><img src="Profile.jpg" alt="Logo" width="100px" class="logo" style=" margin-right:15px; margin-bottom:13px;"></a>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#featured-designs">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<h1>Tabakagani Graphics Designs</h1>
+
+<p style="font-size:26px;">Creative Graphics Designer</p>
+
+<button onclick="goGallery()">Explore My Work</button>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about hidden" id="about">
+<img src="Icon.jpg" alt="Logo-2" style="margin-bottom:14px; margin-left:260px; box-shadow:0 0 45px #ffffffb7,0 0 63px #383930; border-radius:50px; height:200px; width:200px;">
+<h2>About Me</h2>
+<p>
+Hi, I’m the designer behind <span style="color
+:#ffd700;"><sup
+style="font-size:21px; margin-right:1px;">☆</sup><u><b>Tabakagani Graphic Designs</b></u><sup
+style="font-size:21px;margin-left:1px;">☆</sup></u></span><br>
+I specialize in creating artistic and meaningful
+designs for weddings, birthdays, businesses, and
+special events. My goal is to turn ideas into 
+designs that attract attention and communicate 
+clearly.
+
+</p>
+</section>
+
+<!-- SERVICES -->
+
+<section class="services hidden" id="services">
+
+<h2>My Services</h2>
+
+<div class="service-container">
+
+<div class="card">
+<img src="wedding.jpg" alt="Wedding-Designs">
+<h3>Wedding Designs</h3>
+<p>Beautiful wedding poster designs.</p>
+</div>
+
+<div class="card">
+<img src="Birthday.jpg" alt="Birthday-Designs">
+<h3>Birthday Designs</h3>
+<p>Creative birthday cards.</p>
+</div>
+
+<div class="card">
+<img src="baby.jpg" alt="Naming-Ceremony">
+<h3>Naming Ceremony</h3>
+<p>Special naming ceremony posters.</p>
+</div>
+
+<div class="card">
+<img src="Business.jpg" alt="Business-Cards">
+<h3>Business Flyers</h3>
+<p>Professional business flyers.</p>
+</div>
+
+<div class="card">
+<img src="T-shirt.jpg" alt="T-shirts-Print-ons">
+<h3>T-Shirt Designs</h3>
+<p>Custom shirt graphics.</p>
+</div>
+
+<div class="card">
+<img src="Gradu.jpg" alt="Campaign-Posters">
+<h3>Campaign Poster Designs</h3>
+<p>Creative posters and stickers designed to promote leadership and ideas.</p>
+</div>
+
+</div>
+</section>
+
+
+
+<!-- PORTFOLIO -->
+
+<!---<section class="portfolio hidden" id="portfolio">
+
+<!---<h2>My Portfolio</h2>/--->
+
+<!---<div class="gallery">/--->
+
+<!---<div class="work">
+<img src="Neverluck.png">
+<!---<div class="overlay"><h3><img src="Neverluck.png"></h3></div>
+</div>/--->
+
+<!--
+<div class="work">
+<img src="Doit.jpg">
+<div class="overlay"><h3><img src="Doit.jpg"></h3></div>
+</div>-->
+<!---
+<div class="work">
+<!---<img src="Ceremony.jpg" height="440px">/--->
+<!---<div class="overlay"><h3><img src="Ceremony.jpg" style="height="560px" ></h3>
+</div>/--->
+
+<!---<div class="work">
+<img src="Icon.jpg">
+<div class="overlay"><h3><img src="Icon.jpg"height=""></h3></div>
+</div>/--->
+
+<!---<div class="work">
+<img src="Aja.jpg">
+<div class="overlay"><h3><img src="Aja.jpg"></h3></div>
+</div>/--->
+
+<!---<div class="work">
+<img src="Jumma.png">
+<div class="overlay"><h3><img src="Jumma.png"></h3></div>
+</div>--->
+
+<!--</div>--->
+<!-- FEATURED DESIGNS -->
+
+<section class="featured-designs hidden" id="featured-designs">
+
+  <h2>Featured Designs</h2>
+
+  <div class="featured-container">
+
+    <div class="featured-card">
+      <img src="wedding.jpg" alt="Wedding Poster" height="300px">
+      <div class="overlay">
+        <h3>Wedding Posters Design</h3>
+        <p>Beautiful poster created for a wedding celebration. Tools: Photoshop & Illustrator.</p>
+      </div>
+    </div>
+
+    <div class="featured-card">
+      <img src="Birthday.jpg" alt="Birthday Poster">
+      <div class="overlay">
+        <h3>Birthday Designs</h3>
+        <p>Creative birthday poster designed to celebrate memorable moments.</p>
+      </div>
+    </div>
+
+    <div class="featured-card">
+      <img src="baby.jpg" alt="Naming Ceremony Poster">
+      <div class="overlay">
+        <h3>Naming Ceremony Posters</h3>
+        <p>Special poster designed for naming ceremonies with vibrant visuals.</p>
+      </div>
+    </div>
+
+    <div class="featured-card">
+      <img src="Business.jpg" alt="Business Flyer">
+      <div class="overlay">
+        <h3>Business Flyers</h3>
+        <p>Professional flyer design for businesses to attract attention and clients.</p>
+      </div>
+    </div>
+
+    <div class="featured-card">
+      <img src="T-shirt.jpg" alt="T-Shirt Design">
+      <div class="overlay">
+        <h3>T-Shirt Graphics</h3>
+        <p>Custom T-shirt design with modern and eye-catching graphics.</p>
+      </div>
+    </div>
+
+    <div class="featured-card">
+      <img src="Gradu.jpg" alt="Campaign Poster"height="220px">
+      <div class="overlay">
+        <h3>Campaign Posters Design</h3>
+        <p>Creative poster created to promote leadership and ideas.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact hidden" id="contact">
+
+  <h2>Contact Me</h2>
+
+  <form id="contactForm" action="https://formspree.io/f/mqeylypq" method="POST">
+    
+<input type="hidden" name="_subject" value="New Client Message - TABAKAGANI GRAPHICS DESIGNS">
+
+
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+
+  <div class="fid">
+    <p>📞 Phone: +233 55 397 0641</p><br>
+    <p>📧 Email: Mohammedissah745@gmail.com</p><br>
+<p style="font-size:28px; height:80px; margin-bottom:2px;">
+  <span><img src="WhatsApp.png" alt="WhatsApp" class="pic" width="30px"></span>
+   +233 55 397 0641
+</p>
+    <p style="font-size:28px; height:80px; margin-bottom:3.5px;">
+  <span><img src="Facebook.jpg" alt="Facebook" class="pic" width="30px"></span>
+  Mohammed Issah
+</p>
+<p style="font-size:28px; height:80px;margin-bottom:3.5px;">
+  <span><img src="Insta.jpg" alt="Instagram" class="pic" width="30px"></span>
+  @tabakagani_designs
+</p>
+  </div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Tabakagani Graphics Design</p>
+<p style="font-size:29px; opacity:0.6; margin-top:8px;">
+    Developed by Denaps
+  </p>
+<p style="font-size:25px; opacity:0.6; margin-top:5px;">
+  <a href="mailto:your-email@example.com" style="color:inherit; text-decoration:none; padding-bottom:8px;">
+    Contact Me:<br>
+    0555358325a@gmail.com
+  </a>
+</p>
+</p>
+
+</footer>
+
+
+<script>
+
+/* BUTTON SCROLL */
+
+function goGallery(){
+document.getElementById("featured-designs").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+/* FORM MESSAGE */
+  // Success alert for Formspree
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', async function(event){
+    event.preventDefault(); // stop default page reload
+
+    const formData = new FormData(form);
+
+    // Send to Formspree
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if(response.ok){
+      alert("✅ Message Sent Successfully!");
+      form.reset(); // clear the form
+    } else {
+      alert("❌ Oops! There was a problem sending your message.");
+    }
+  });
+
+/* SCROLL REVEAL ANIMATION */
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show")
+}
+})
+})
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el)
+})
+
+</script>
+
+</body>
+</html>

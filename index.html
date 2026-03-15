@@ -9,103 +9,73 @@
 
 <style>
 
-/* GLOBAL */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Comic Sans MS,Georgia;
+font-family:Comic Sans MS, Georgia;
 }
 
 body{
 background:#0f0f0f;
 color:white;
-scroll-behavior:smooth;
+scroll-behavior: smooth;
 }
 
-/* header */
+/* HEADER */
+
 header{
-  display: flex;
-  width: 100%;
-background-color: #837e17;
 opacity:0.9;
-position: fixed;
-padding:px 11%;
-backdrop-filter: blur(9px);
-z-index: 1000;
-}
-/* logo*/
-.logo{
-  margin-left:12px;
-  margin-top:10px;
-  height:90px;
-  width:90px;
-  border-radius:50px;
-}
-/* logo*/
-
-/* navbar */
-
-nav{  
-  background-color: #837e17;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  z-index: 1000;
-  color:white;
-}
-nav ul{
-  flex-direction: row;
-  justify-content:space-between;
-  align-items:center;
-  margin-left:120px;
+position:fixed;
+top:0;
+height: 7%;
+width:100%;
+background:#837e17;
 display:flex;
-gap:40px;
-list-style:none;
-color:white;
+flex-direction: row;
+padding:10px 6%;
+z-index:1000;
 }
 
-nav ul li{
-  font-size:30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  list-style:none;
-  color:white;
+.logo{
+  box-shadow:0 0 5px #00010a,0 0 8px #db0d5f;
+  border:0.2px solid white;
+width:40px;
+height:40px;
+border-radius:50%;
+}
+
+/* NAV */
+
+nav ul{
+ margin-top: 11px;
+margin-left: 35px;
+display:flex;
+list-style:none;
 }
 
 nav ul li a{
-  text-decoration:none;
-  color:white;
-  margin-right:9px;
+text-decoration:none;
+color:white;
+font-size:13px;
 }
-/* navbar */
-
-/* header */
-
-
-
 
 nav ul li a:hover{
+color:#0921c5;
 text-decoration: underline;
-color:blue;
-font-size: 40px;
-margin-rightt:35px;
-
+font-size: 15px;
 }
 
 /* HERO */
 
 .hero{
-  outline: none;
-  font-size: 20px;
 height:100vh;
 display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
 flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
 url("https://images.unsplash.com/photo-1611162617474-5b21e879e113");
 background-size:cover;
@@ -113,436 +83,258 @@ background-position:center;
 }
 
 .hero h1{
-font-size:60px;
+font-size:40px;
 color:#ffd700;
-letter-spacing:2px;
 }
 
 .hero p{
-margin-top:15px;
-font-size:25px;
-opacity:.8;
+margin-top:10px;
+font-size:18px;
 }
 
 .hero button{
-width: 600px;
-height: 80px;
-margin-top:30px;
-padding:14px 35px;
+margin-top:25px;
+padding:12px 30px;
 border:none;
 background:#ffd700;
-outline: none;
 color:black;
-font-size: 25px;
-font-family: Comic Sans MS,Georgia;
 font-weight:bold;
+border-radius:25px;
 cursor:pointer;
-border-radius:30px;
-transition:.3s;
 }
 
 .hero button:hover{
-  outline: none;
-transform:scale(1.1);
+transform:scale(1.05);
+}
+
+/* SECTIONS */
+
+section{
+padding:90px 8%;
 }
 
 /* ABOUT */
 
 .about{
-font-family: Georgia;
-margin-top: 100px;
-padding:100px 10%;
+  padding-top: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 text-align:center;
+}
+
+.about img{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width:100px;
+height:150px;
+border-radius:30%;
+margin-bottom:30px;
+box-shadow:0 0 10px #d30dcc;
 }
 
 .about h2{
-  margin-top: 160px;
-  margin-left: 250px;
-  border: none;
-  width: 250px;
-  outline: none;
-  background: none;
-font-size: 50px;
-text-align:center;
+  margin-top:35px;
 color:#ffd700;
-margin-bottom:60px;
+font-size:32px;
+margin-bottom:20px;
 }
 
 .about p{
-margin-left: 30px;
-margin-top:6px;
-font-family: Comic Sans MS,Georgia;
-font-size: 46px;
-max-width:950px;
-flex-wrap: wrap;
-opacity:.8;
-line-height:1.9;
+max-width:700px;
+margin:auto;
+line-height:1.7;
+font-size:18px;
 }
-
-/* About*/
-
 
 /* SERVICES */
 
-.services{
-padding:100px 10%;
-}
-
 .services h2{
-font-size:45px;
 text-align:center;
 color:#ffd700;
-margin-bottom:70px;
-padding-bottom: 45px;
+font-size:32px;
+margin-bottom:40px;
 }
 
 .service-container{
-display:flex;
-justify-content: flex-start;
-gap:10px;
-flex-wrap:wrap;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
 .card{
-width:120%;
 background:#181818;
-padding:20px;
+padding:15px;
 border-radius:10px;
 text-align:center;
-transition:.4s;
+transition:.3s;
 }
 
 .card img{
 width:100%;
 border-radius:8px;
-margin-bottom:10px;
-}
-
-.card img:hover{
-width:97%;
-border-radius:8px;
-margin-bottom:10px;
 }
 
 .card:hover{
-  font-size: 35px;
-  margin-left: 12px;
-  width: 190%;
-  transform:scale(1.2);
-  opacity:1;
+transform:translateY(-7px);
 background:#202020;
-box-shadow:0 0 13px #ffffffb7,0 0 23px #383930;
 }
 
 .card h3{
-margin-bottom:10px;
+margin-top:10px;
 }
-/* services end/*
 
-/* FEATURED DESIGNS */
+/* FEATURED */
 
 .featured-designs{
-  padding:100px 10%;
-  background:#111;
-}
-
-.featured-designs h2{
-  text-align:center;
-  color:#ffd700;
-  font-size:45px;
-  margin-bottom:60px;
-}
-
-/* Container for all cards */
-.featured-container{
-  display:flex;
-  flex-wrap:wrap;
-  gap:30px;
-  justify-content:center;
-}
-
-/* Single card */
-.featured-card{
-  position:relative;
-  width:300px;
-  border-radius:12px;
-  overflow:hidden;
-  cursor:pointer;
-  transition: transform .3s, box-shadow .3s;
-}
-
-.featured-card img{
-  width:100%;
-  display:block;
-  border-radius:12px;
-  transition: transform .3s;
-}
-
-/* Hover effect */
-.featured-card:hover img{
-  transform:scale(1.1);
-}
-
-/* Overlay */
-.featured-card .overlay{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.7);
-  color:#ffd700;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:20px;
-  opacity:0;
-  transition:opacity .3s;
-}
-
-.featured-card:hover .overlay{
-  opacity:1;
-}
-
-.featured-card .overlay h3{
-  font-size:24px;
-  margin-bottom:10px;
-}
-
-.featured-card .overlay p{
-  font-size:16px;
-  line-height:1.4;
-  color:#fff;
-}
-
-/* PORTFOLIO */
-
-/*
-.portfolio{
-margin-top:12px ;
-font-size: 25px;
-padding:100px 10%;
 background:#111;
 }
 
-.portfolio h2{
+.featured-designs h2{
 text-align:center;
 color:#ffd700;
-margin-bottom:50px;
+font-size:32px;
+margin-bottom:40px;
 }
 
-.gallery{
+.featured-container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:10px;
+gap:25px;
 }
 
-.work{
-font-size: 25px;
+.featured-card{
 position:relative;
 overflow:hidden;
 border-radius:10px;
 }
 
-.work img{
+.featured-card img{
 width:100%;
 display:block;
-transition:.5s;
 }
 
 .overlay{
-  font-size: 25px;
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.7);
+background:rgba(0,0,0,0.7);
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
+text-align:center;
 opacity:0;
-transition:.4s;
+transition:.3s;
+padding:20px;
 }
 
 .overlay h3{
 color:#ffd700;
+margin-bottom:10px;
 }
 
-.work:hover img{
-transform:scale(1.2);
-}
-
-.work:hover .overlay{
-  width:100%;
+.featured-card:hover .overlay{
 opacity:1;
-} */
+}
 
 /* CONTACT */
 
 .contact{
-  display:flex;
-  flex-direction:column;
-  justify-content:centet;
-  margin-bottom: 56px;
-  font-size: 25px;
-padding:100px 10%;
 text-align:center;
-}
-.contact input{
-  font-size: 25px;
-  border: none;
-  border-bottom: 2px black;
-  border-left: 2px black;
-  border-right: 2px black;
-  
 }
 
 .contact h2{
 color:#ffd700;
-font-size:45px;
-margin-bottom:30px;
+font-size:32px;
+margin-bottom:20px;
 }
 
 form{
-  display:flex;
-  flex-direction:column;
-  justify-content:centet;
-  margin-bottom: 56px;
-  font-size: 25px;
-padding:100px 10%;
-text-align:center;
-gap:12px;
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
 input, textarea{
-font-size: 25px;
-padding:12px;
+padding:10px;
 border:none;
-border-radius:6px;
+border-radius:5px;
 background:#1d1d1d;
 color:white;
 }
 
 button{
-font-size: 20px;
-width: 250px;
-height: 69px;
-padding:12px;
-outline: none;
-background:#ffd700;
-color:black;
-font-weight:bold;
-cursor:pointer;
-border-radius:20px;
-}
-
-.sendMessage{
-  outline: none;
-width: 250px;
-height: 69px;
+margin-top:10px;
 padding:12px;
 border:none;
 background:#ffd700;
 color:black;
 font-weight:bold;
-cursor:pointer;
 border-radius:20px;
+cursor:pointer;
 }
-
 
 button:hover{
 transform:scale(1.05);
 }
 
+/* CONTACT DETAILS */
+
+.fid{
+margin-top:40px;
+background:#0d0e0f72;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 10px #ccc;
+}
+
+.fid p{
+margin:10px 0;
+}
+
 /* FOOTER */
 
 footer{
-height: 220px;
-padding-top:13px;
 text-align:center;
+padding:30px;
 background:#5a670eb7;
-margin-top:50px;
-opacity:0.7;
-box-shadow:0 0 13px #ffffffb7;
+margin-top:40px;
 }
+
 footer p{
-  font-size:45px;
-  margin-top:60px;
+margin-top:10px;
 }
 
-/* SCROLL ANIMATION */
-section{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-padding:80px 8%;
-scroll-margin-top:80px;
-scroll-snap-align:start;
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav ul{
+gap:15px;
 }
 
-.hidden{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
+.hero h1{
+font-size:30px;
 }
 
-.show{
-opacity:1;
-transform:translateY(0);
 }
-
-.span{
-  font-size: 25px;
-  margin-bottom: 12px;
-  margin-left: 12px;
-}
-/*Contact div blue color*/
-.fid{
-  background: #233f6a;
-  width:100%;
-  margin-right:56px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  margin-bottom: 56px;
-  font-size: 25px;
-padding:100px 10%;
-text-align:center;
-gap:12px;
-background:background:#0d0e0f72;
-box-shadow:0 0 12px #edeef0;
-border-radius:50px;
-margin-top:100px;
-}
-/*Contact div blue color*/
-
-
-/*Contacts img*/
-.pic{
-  padding-top:5px;
-  margin-right: 6px;
-  border-radius: 50px;
-  margin-top: 40px;
-}
-/*Contacts img*/
-
-
-/*Contacts numbers*/
-/*Contacts numbers*/
 
 </style>
 </head>
 
 <body>
 <header>
+  <a href="#home"><img src="Profile.jpg" alt="Logo" class="logo"></a>
 <nav>
 
-
-<a href="#home"><img src="Profile.jpg" alt="Logo" width="100px" class="logo" style=" margin-right:15px; margin-bottom:13px;"></a>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
@@ -570,7 +362,7 @@ margin-top:100px;
 <!-- ABOUT -->
 
 <section class="about hidden" id="about">
-<img src="Icon.jpg" alt="Logo-2" style="margin-bottom:14px; margin-left:260px; box-shadow:0 0 45px #ffffffb7,0 0 63px #383930; border-radius:50px; height:200px; width:200px;">
+<img src="Icon.jpg" alt="Logo-2">
 <h2>About Me</h2>
 <p>
 Hi, I’m the designer behind <span style="color
@@ -724,10 +516,17 @@ clearly.
     </div>
 
     <div class="featured-card">
-      <img src="Gradu.jpg" alt="Campaign Poster"height="220px">
+      <img src="Gradu.jpg" alt="Campaign Poster"height="300px">
       <div class="overlay">
         <h3>Campaign Posters Design</h3>
         <p>Creative poster created to promote leadership and ideas.</p>
+      </div>
+    </div>
+    <div class="featured-card">
+      <img src="Jumma.png" alt="Artistic" height="300px">
+      <div class="overlay">
+        <h3>Artistic Designs</h3>
+    <p>Transforming ideas into all kinds of stunning graphic designs!</p>
       </div>
     </div>
 
@@ -741,7 +540,7 @@ clearly.
 
   <form id="contactForm" action="https://formspree.io/f/mqeylypq" method="POST">
     
-<input type="hidden" name="_subject" value="New Client Message - TABAKAGANI GRAPHICS DESIGNS">
+<input type="hidden" name="_subject" value="TABAKAGANI GRAPHICS DESIGNS">
 
 
     <input type="text" name="Name" placeholder="Your Name" required>
@@ -755,15 +554,15 @@ clearly.
   <div class="fid">
     <p>📞 Phone: +233 55 397 0641</p><br>
     <p>📧 Email: Mohammedissah745@gmail.com</p><br>
-<p style="font-size:28px; height:80px; margin-bottom:2px;">
-  <span><img src="WhatsApp.png" alt="WhatsApp" class="pic" width="30px"></span>
+<p style="fmargin-bottom:2px;">
+  <span><img src="WhatsApp.png" alt="WhatsApp" style="border-radius:55px" class="pic" width="30px"></span>
    +233 55 397 0641
 </p>
-    <p style="font-size:28px; height:80px; margin-bottom:3.5px;">
+    <p style="margin-bottom:3.5px;">
   <span><img src="Facebook.jpg" alt="Facebook" class="pic" width="30px"></span>
   Mohammed Issah
 </p>
-<p style="font-size:28px; height:80px;margin-bottom:3.5px;">
+<p style="margin-bottom:6px;">
   <span><img src="Insta.jpg" alt="Instagram" class="pic" width="30px"></span>
   @tabakagani_designs
 </p>
@@ -773,15 +572,14 @@ clearly.
 
 <footer>
 
-<p>© 2026 Tabakagani Graphics Design</p>
-<p style="font-size:29px; opacity:0.6; margin-top:8px;">
-    Developed by Denaps
-  </p>
-<p style="font-size:25px; opacity:0.6; margin-top:5px;">
-  <a href="mailto:your-email@example.com" style="color:inherit; text-decoration:none;">
+<p>© 2026 Tabakagani Graphics Designs</p>
+<p style="font-size:14px; opacity:0.6;">Developed by Denaps</p>
+<p style="font-size:13px; opacity:0.6; margin-top:8px;">
+  <a href="mailto:your-email@example.com" style="color:inherit; text-decoration:none; padding-bottom:8px;">
+    Contact Me:<br>
     0555358325a@gmail.com
-  </a>
-</p>
+  </a><br>
+  <span style="font-size:13px;margin-top:10px;">☎️: 0555358325</span>
 </p>
 
 </footer>
@@ -796,6 +594,9 @@ document.getElementById("featured-designs").scrollIntoView({
 behavior:"smooth"
 });
 }
+
+// Scroll to element smoothly
+
 
 /* FORM MESSAGE */
   // Success alert for Formspree
